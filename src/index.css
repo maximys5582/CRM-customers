@@ -93,7 +93,7 @@ h6 {
 /*--------------------*/
 
 .avatar {
-  background: #D8793E;
+  background: #d8793e;
   text-align: center;
   height: 7rem;
   font-weight: bold;
@@ -106,12 +106,12 @@ h6 {
 }
 
 .avatar button {
-  background: #D8793E;
+  background: #d8793e;
   border-radius: 25px;
-  color: #E8AE8B;
-  border: 1px solid #E8AE8B;
+  color: #e8ae8b;
+  border: 1px solid #e8ae8b;
   padding: 0 10px;
-  margin: 1rem;
+  margin: 1rem 0;
 }
 
 .menu--main {
@@ -123,7 +123,7 @@ h6 {
 .menu--main nav {
   display: flex;
   flex-direction: column;
-  background: #1B2025;
+  background: #1b2025;
   height: 100%;
 }
 
@@ -144,7 +144,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #BC5B23;
+  background: #bc5b23;
   height: 7rem;
 }
 
@@ -157,13 +157,13 @@ h6 {
 
 .Navigation--title-navigation {
   padding: 2vh 0 2vh 10px;
-  color: #9598A1;
+  color: #9598a1;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .Navigation--other {
-  background: #2F353C;
+  background: #2f353c;
   height: 100vh;
 }
 
@@ -177,20 +177,20 @@ h6 {
 
 .change--exercise p {
   text-align: center;
-  
+
   font-size: 16px;
   padding: 15px 0;
 }
 
 .active {
   padding: 15px 0;
-  background: #DD8447;
+  background: #dd8447;
 }
 
 .ListOfClient {
   overflow: hidden;
   color: #000;
-  margin-left: 19rem;
+  margin-left: 16%;
   width: 84%;
   height: 100vh;
 }
@@ -207,7 +207,6 @@ h6 {
   font-weight: bold;
   font-size: 27px;
   margin: 0 18px 0 30px;
-
 }
 
 .count {
@@ -215,7 +214,7 @@ h6 {
   font-weight: bold;
   letter-spacing: 1px;
   color: #fff;
-  background: #D8793E;
+  background: #d8793e;
   padding: 2px 15px;
   border-radius: 30px;
   height: 1.3rem;
@@ -227,19 +226,20 @@ h6 {
 
 .add--partner--btn {
   background: #fff;
-  border: 1px solid #F1886C;
-  color: #F1886C;
+  border: 1px solid #f1886c;
+  color: #f1886c;
+  font-size: 14px;
   padding: 5px 15px;
   border-radius: 5px;
   transition: 0.2s;
 }
 
 .add--partner--btn:hover {
-  background: #CCCCCC;
+  background: #cccccc;
 }
 
 .SearchAndFilters {
-  background: #F6F6F7;
+  background: #f6f6f7;
   display: flex;
   margin: 30px;
   padding: 25px;
@@ -252,13 +252,12 @@ h6 {
   display: block;
   max-width: 220px;
   min-width: 180px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   margin: 0 5px;
   z-index: 10;
 }
 
 .custom-select select {
-
   cursor: pointer;
   border: none;
   outline: none;
@@ -284,16 +283,16 @@ h6 {
   height: 70%;
   line-height: 38px;
   content: "˅";
-  color: #CCCCCC;
+  color: #cccccc;
   text-align: center;
-  border-left: 1px solid #CCCCCC;
+  border-left: 1px solid #cccccc;
   z-index: -1;
 }
 
 .searchCustomers {
   margin: 0 5px 0 0;
   padding-left: 10px;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   width: 300px;
   border-radius: 5px;
 }
@@ -301,11 +300,11 @@ h6 {
 .table {
   display: flex;
   align-items: center;
-  background: #F6F6F7;
-  padding: 0 15px;
+  background: #f6f6f7;
+  padding: 0 0 0 15px;
   margin: 7px 30px;
-  border-left: 7px solid #CCCCCC;
-  border-bottom: 2px solid #EDEDF0;
+  border-left: 7px solid #cccccc;
+  border-bottom: 2px solid #ededf0;
   border-radius: 5px;
   font-size: 14px;
 }
@@ -317,7 +316,7 @@ h6 {
   align-items: center;
   margin: 5px 20px 5px 20px;
   padding-left: 8px;
-  border-left: 2px solid #EDEDF0;
+  border-left: 2px solid #ededf0;
 }
 
 .client--component img {
@@ -326,6 +325,8 @@ h6 {
 }
 
 .client--component:first-child {
+  max-width: 130px;
+  min-width: 130px;
   border-left: none;
   margin-left: 0;
   padding-left: 0;
@@ -338,13 +339,12 @@ h6 {
 
 .color-SFF {
   background: rgb(236, 240, 232);
-  color: #99BD65;
+  color: #99bd65;
 }
 
 .color-SA {
-  background: #EDEAF1;
-  color: #9B80BA;
-
+  background: #edeaf1;
+  color: #9b80ba;
 }
 
 .qwe {
@@ -357,22 +357,22 @@ h6 {
 }
 
 .warning-svg {
-  fill: #CCCCCC;
+  fill: #cccccc;
   transition: 0.2s;
   margin-left: 15px;
 }
 
 .warning-svg:hover {
-  fill: #DD8447
+  fill: #dd8447;
 }
 
 .tooltip {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   width: 250px;
   background: #fff;
   border: 1px solid #8c8c8c;
-  color: #8C8C8C;
+  color: #8c8c8c;
   padding: 5px 10px;
   bottom: 100%;
   left: 50%;
@@ -396,14 +396,13 @@ h6 {
 }
 
 .project_select {
-  background: #EDEDF0;
+  background: #ededf0;
   padding: 7px;
   border-radius: 20px;
   width: 100px;
 }
 
 .action {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,7 +416,7 @@ h6 {
 }
 
 .action_false {
-  background: #EDEDF0;
+  background: #ededf0;
 }
 
 .MySelectProject {
@@ -425,7 +424,7 @@ h6 {
   width: 150px;
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: #ededf0;
   border-radius: 15px;
   padding: 6px 5px;
   cursor: pointer;
@@ -443,7 +442,7 @@ h6 {
 }
 
 .MySelectProject_title svg {
-  fill: #DD8447;
+  fill: #dd8447;
 }
 
 .MySelectProject_title {
@@ -452,7 +451,7 @@ h6 {
 }
 
 .MSP_activ {
-  background: #DD8447;
+  background: #dd8447;
 }
 
 .MSP_title svg {
@@ -471,14 +470,14 @@ h6 {
   width: 22rem;
   display: grid;
   grid-template-columns: 0.8fr 0.2fr 0.2fr 0.2fr 0.1fr;
-  border: 1px solid #CCCCCC;
+  border: 1px solid #cccccc;
   border-radius: 5px;
   background-color: white;
 }
 
 .selectLine {
   display: contents;
-  border-bottom: 2px solid #CCCCCC;
+  border-bottom: 2px solid #cccccc;
 }
 
 .selectLine span {
@@ -486,7 +485,7 @@ h6 {
 }
 
 .selectLine__new {
-  background: #E49D6C;
+  background: #e49d6c;
   color: #fff;
   font-weight: 700;
   padding: 2px 3px;
@@ -498,10 +497,92 @@ h6 {
   position: absolute;
   top: 2px;
   right: 0;
-  fill: #CCCCCC;
+  fill: #cccccc;
 }
 
 .arrow_active svg {
   transform: rotate(180deg);
   fill: #fff;
+}
+
+.client_buttons {
+  display: flex;
+}
+
+.client_buttons__button {
+  min-width: 50px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 2px solid #f1dfd4;
+  cursor: pointer;
+}
+
+.client_buttons__button svg {
+  fill: #cccccc;
+}
+
+.client_buttons__button__active svg {
+  fill: #dd8447;
+}
+
+.modalWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  width: 500px;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.modalWindow_title {
+  font-size: 29px;
+}
+
+.Modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 50%);
+}
+
+.MyInput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #cccccc;
+  padding: 0 0 0 15px;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.Mybtn {
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid #dd8447;
+  color: #dd8447;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 18px;
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.Mybtn:hover {
+  background: #e5e5e5;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+}
+
+.radio {
+  padding: 5px 15px;
 }

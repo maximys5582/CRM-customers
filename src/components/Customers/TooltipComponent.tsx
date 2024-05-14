@@ -48,25 +48,25 @@ const TooltipComponent: React.FC<TooltipComponentProps> = ({
         <div className="Tooltip_line">
           <span className="Tooltip_line__title">
             <strong>{client.subscriptionDuration}</strong>
-          </span>{" "}
+          </span>
           <span>Abonnement</span>
         </div>
         <div className="Tooltip_line">
           <span className="Tooltip_line__title">
             <strong>{client.userPlaces}</strong>
-          </span>{" "}
+          </span>
           <span>Benutzersitze</span>
         </div>
         <div className="Tooltip_line">
           <span className="Tooltip_line__title">
             <strong>{client.paymentProcedure}</strong>
-          </span>{" "}
+          </span>
           <span>Zahlungsreihenfolge</span>
         </div>
         <div className="Tooltip_line">
           <span className="Tooltip_line__title">
             <strong>{client.generalExpenses}€</strong>
-          </span>{" "}
+          </span>
           <span>Gesamtkosten</span>
         </div>
       </div>

@@ -21,7 +21,11 @@ const MySelectProject: React.FC<MySelectProjectProps> = ({ options, type }) => {
   const [isVisible, setIsVisible] = useState(false)
 
   const toggleVisibility = () => {
-    setIsVisible(prew => !prew)
+    setIsVisible((prew) => !prew)
+  }
+
+  if (!options || options.length === 0) {
+    return null // Рендерим компонент пустым, если массив options не определен или пуст
   }
 
   return (
@@ -37,20 +41,18 @@ const MySelectProject: React.FC<MySelectProjectProps> = ({ options, type }) => {
         }
       >
         {options.length > 0 && ( // Проверяем, что в массиве есть элементы
-  <React.Fragment>
-    {getImageByKey("project_svg")} Project
-    <span>
-      <p className={options[0].new ? "selectLine__new" : " "}>
-        {options[0].new ? "New" : " "}
-      </p>
-    </span>
-    <span className={isVisible ? "arrow arrow_active" : "arrow"}>
-      {getImageByKey("arrow_down")}
-    </span>
-  </React.Fragment>
-)}
-
-        
+          <React.Fragment>
+            {getImageByKey("project_svg")} Project
+            <span>
+              <p className={options[0].new ? "selectLine__new" : " "}>
+                {options[0].new ? "New" : " "}
+              </p>
+            </span>
+            <span className={isVisible ? "arrow arrow_active" : "arrow"}>
+              {getImageByKey("arrow_down")}
+            </span>
+          </React.Fragment>
+        )}
       </span>
       {isVisible && (
         <div className="selectContent">

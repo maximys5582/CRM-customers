@@ -1,14 +1,20 @@
 import { getImageByKey } from "../../getImageKey"
 import TooltipComponent from "./TooltipComponent"
 import MySelectProject from "./MySelectProject"
-import { useState } from "react"  
-
+import { useState } from "react"
 
 interface MySelectProjectType {
-  leftText: string;
-  new: boolean;
-  projectCompletion: number;
-  icon: any;
+  leftText: string
+  new: boolean
+  projectCompletion: number
+  icon: any
+}
+
+interface MyButtons {
+  list: boolean
+  light_bulb: boolean
+  message: boolean
+  loop: boolean
 }
 
 interface ClientListType {
@@ -33,18 +39,22 @@ interface ClientListType {
   user: number
   product: number
   load: number
-  project: MySelectProjectType[],
+  project: MySelectProjectType[]
   actions: boolean
+  buttons: MyButtons
 }
 
 interface ClientListProps {
   client: ClientListType[]
 }
 
-
-
 const ClientList: React.FC<ClientListProps> = ({ client }) => {
   const [actionClick, setActionClick] = useState(true)
+  const [buttonsActive, setButtonsActive] = useState(false)
+
+  const butActive = () => {
+    setButtonsActive(!buttonsActive)
+  }
 
   const handleClickAction = () => {
     setActionClick(!actionClick)
@@ -56,7 +66,8 @@ const ClientList: React.FC<ClientListProps> = ({ client }) => {
         <div className="table" key={index}>
           <div className="client--component">
             <strong>
-              {item.clients.firstName} {item.clients.lastName}
+              {item.clients && item.clients.firstName}{" "}
+              {item.clients && item.clients.lastName}
             </strong>
           </div>
 
@@ -103,7 +114,7 @@ const ClientList: React.FC<ClientListProps> = ({ client }) => {
 
           <div className="client--component __svg">
             <div style={{ position: "relative" }}>
-            <MySelectProject options={item.project} type={item.type} />
+              <MySelectProject options={item.project} type={item.type} />
             </div>
           </div>
 
@@ -119,8 +130,50 @@ const ClientList: React.FC<ClientListProps> = ({ client }) => {
                 : getImageByKey("ads_icon")}
             </div>
           </div>
-
-          <div></div>
+          <div className="client_buttons">
+            {item.buttons && (
+              <>
+                <div
+                  className={
+                    item.buttons.list
+                      ? "client_buttons__button client_buttons__button__active"
+                      : "client_buttons__button"
+                  }
+                  onClick={butActive}
+                >
+                  {getImageByKey("list")}
+                </div>
+                <div
+                  className={
+                    item.buttons.light_bulb
+                      ? "client_buttons__button client_buttons__button__active"
+                      : "client_buttons__button"
+                  }
+                  onClick={butActive}
+                >
+                  {getImageByKey("light_bulb")}
+                </div>
+                <div
+                  className={
+                    item.buttons.loop
+                      ? "client_buttons__button client_buttons__button__active"
+                      : "client_buttons__button"
+                  }
+                >
+                  {getImageByKey("message")}
+                </div>
+                <div
+                  className={
+                    item.buttons.message
+                      ? "client_buttons__button client_buttons__button__active"
+                      : "client_buttons__button"
+                  }
+                >
+                  {getImageByKey("loop")}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       ))}
     </div>

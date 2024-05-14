@@ -1,7 +1,22 @@
+// В файле ListOfClient.tsx
+
+import React, { useState } from "react"
 import ClientList from "./ClientList"
 import { clientArray } from "../../clientArray/clientArray"
+import { useContext } from "react"
+import { ModalContext } from "../../context/ModalContext"
+import Modal from "./Modal"
+import CreateCustomers from "./CreateCustomers"
 
 const ListOfClient = () => {
+  const { modal, open, close } = useContext(ModalContext)
+  const [clients, setClients] = useState(clientArray)
+
+  const createHandler = (newCustomer: any) => {
+    setClients([...clients, newCustomer])
+    close()
+  }
+
   return (
     <div className="ListOfClient">
       <div className="ListOfClient--top">
@@ -11,7 +26,7 @@ const ListOfClient = () => {
         </div>
 
         <div className="add--partner">
-          <button className="add--partner--btn">
+          <button className="add--partner--btn" onClick={open}>
             <strong>+ </strong>New Partner
           </button>
         </div>
@@ -49,8 +64,14 @@ const ListOfClient = () => {
         </div>
 
         <div className="List-customer">
-          <ClientList client={clientArray} />
+          <ClientList client={clients} />
         </div>
+
+        {modal && (
+          <Modal title="Create new customer" onClose={() => close()}>
+            <CreateCustomers onCreate={createHandler} />
+          </Modal>
+        )}
       </div>
     </div>
   )
