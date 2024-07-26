@@ -3,7 +3,7 @@ import ListOfClient from "../components/Customers/ListOfClient"
 
 const Customers = () => {
   const [activeItem, setActiveItem] = useState("")
-  const [listOfClient, setListOfClient] = useState(true)
+  const [listOfClient, setListOfClient] = useState(false)
 
   const toggleListOfClientVisibility = () => {
     setListOfClient(!listOfClient)
@@ -12,6 +12,7 @@ const Customers = () => {
   const handleClick = (item: string) => {
     setActiveItem(item === activeItem ? "" : item)
     localStorage.setItem("activeItem", item === activeItem ? "" : item)
+    localStorage.setItem("activePageCustomers", item)
 
     if (item === "clients") {
       toggleListOfClientVisibility()
@@ -24,6 +25,9 @@ const Customers = () => {
     const savedActiveItem = localStorage.getItem("activeItem")
     if (savedActiveItem) {
       setActiveItem(savedActiveItem)
+      if (savedActiveItem === "clients") {
+        setListOfClient(true)
+      }
     }
   }, [])
 

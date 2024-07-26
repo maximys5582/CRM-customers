@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useReducer } from "react"
 import { Route, Routes } from "react-router-dom"
 import Customers from "./pages/Customers"
 import HR from "./pages/HR"
@@ -10,13 +10,12 @@ import Settings from "./pages/Settings"
 import Menu from "./components/Customers/Menu"
 
 function App() {
-  const [showCustomers, setShowCustomers] = useState(false)
-
   return (
     <>
-      <Menu showCustomers={showCustomers} setShowCustomers={setShowCustomers} />
+      <Menu />
       <Routes>
-        {showCustomers && <Route path="/customers" element={<Customers />} />}
+        <Route path="/customers" element={<Customers />} />
+
         <Route path="/hr" element={<HR />} />
         <Route path="/revenue" element={<Revenue />} />
         <Route path="/calendar" element={<Calendar />} />

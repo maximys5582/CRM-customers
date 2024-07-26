@@ -254,6 +254,8 @@ h6 {
   min-width: 180px;
   border: 1px solid #cccccc;
   margin: 0 5px;
+  padding: 0 0 0 10px;
+  font-size: 16px;
   z-index: 10;
 }
 
@@ -293,8 +295,35 @@ h6 {
   margin: 0 5px 0 0;
   padding-left: 10px;
   border: 1px solid #cccccc;
-  width: 300px;
+  width: 330px;
+  height: 34px;
+  font-size: 16px;
   border-radius: 5px;
+}
+
+.List-customer {
+  height: 37rem;
+  overflow: auto;
+}
+
+.table_titles {
+  display: grid;
+  grid-template-columns: 170px 120px 145px 120px 120px 140px 120px 122px 180px 110px;
+  align-items: center;
+  padding: 0 30px;
+  margin: 7px 0;
+}
+
+.table_titles__title {
+  text-transform: uppercase;
+  color: #dd8447;
+  text-align: center;
+}
+
+.table_titles__title:first-child {
+  align-items: start;
+  margin-left: 0;
+  font-weight: bold;
 }
 
 .table {
@@ -310,11 +339,12 @@ h6 {
 }
 
 .client--component {
+  position: relative;
   min-width: 100px;
   height: 35px;
   display: flex;
   align-items: center;
-  margin: 5px 20px 5px 20px;
+  margin: 5px 9px;
   padding-left: 8px;
   border-left: 2px solid #ededf0;
 }
@@ -331,6 +361,10 @@ h6 {
   margin-left: 0;
   padding-left: 0;
   margin-right: 10px;
+}
+
+.client--component:nth-child(3) {
+  width: 120px;
 }
 
 .__svg svg {
@@ -409,6 +443,7 @@ h6 {
   height: 34px;
   width: 34px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .action_true {
@@ -551,6 +586,27 @@ h6 {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 50%);
+}
+
+.MyInputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.MyInputSvg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40px; /* Пример ширины */
+  height: 40px; /* Пример высоты */
+  background: #eee;
+  border: 1px solid #cccccc;
+  border-right: 0;
+}
+
+.MyInputSvg svg {
+  position: absolute;
 }
 
 .MyInput {
